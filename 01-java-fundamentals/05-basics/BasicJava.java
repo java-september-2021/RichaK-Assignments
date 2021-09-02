@@ -133,4 +133,12 @@ public class BasicJava {
 
     }
 
+    public int[] shiftingArray(int[] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            arr[i] = arr[i + 1];
+        }
+        arr[arr.length - 1] = 0;
+        return arr;
+    }
+
 }
