@@ -12,12 +12,18 @@ public class GorillaTest {
 		gorilla.climb();
 		gorilla.climb();
 		
+		gorilla.displayEnergy();
+		
 		
 		gorilla.eatBananas();
 		
 		gorilla.eatBananas();
+		
+		gorilla.displayEnergy();
 		
 		gorilla.throwSomething();
+		
+		gorilla.displayEnergy();
 		
 
 	}

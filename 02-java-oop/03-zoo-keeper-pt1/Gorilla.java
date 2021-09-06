@@ -1,5 +1,4 @@
 
-
 public class Gorilla extends Mammal {
 
 	public Gorilla(int energyLevel) {
@@ -7,18 +6,23 @@ public class Gorilla extends Mammal {
 	}
 	
 	public void throwSomething() {
-		System.out.println("Gorilla has thrown something energy level  has decreased by 5");
 		
+		energyLevel -= 5;
+		System.out.println("Gorilla has thrown something energy level  has decreased by : " +  energyLevel);		
 	}
 	
 	
 	public void eatBananas() {
-		System.out.println("Gorilla is satisfied and energy level has increased by 10");
+		
+		energyLevel += 10;
+		System.out.println("Gorilla is satisfied and energy level has increased by : " +  energyLevel);
+		
 	}
 	
 	
 	public void climb() {
-		System.out.println("Gorilla has climbed tree and energy level has decreased by 10");
+		energyLevel -= 10;
+		System.out.println("Gorilla has climbed tree and energy level has decreased by :" +  energyLevel);
 	}
 
 }
