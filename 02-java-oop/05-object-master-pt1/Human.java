@@ -1,15 +1,15 @@
 public class Human {
 
-    protected int strength = 3;
-    protected int stealth = 3;
-    protected int intelligence = 3;
-    protected int health = 100;
+    protected int strength;
+    protected int stealth;
+    protected int intelligence;
+    protected int health;
 
-    public Human(int strength, int stealth, int intelligence, int health) {
-        this.intelligence = intelligence;
-        this.stealth = stealth;
-        this.strength = strength;
-        this.health = health;
+    public Human() {
+        this.intelligence = 3;
+        this.stealth = 3;
+        this.strength = 3;
+        this.health = 100;
     }
 
     public int getStrength() {
@@ -44,8 +44,12 @@ public class Human {
         this.health = health;
     }
 
-    public int attack(int health) {
-        return health;
+    public void attack(Human humanAttacked) {
+        humanAttacked.health -= this.strength;
+
+        System.out.println("The human attacked other human by  " + this.strength
+                + " the other human who got attacked has health of " + humanAttacked.health);
+
     }
 
 }
