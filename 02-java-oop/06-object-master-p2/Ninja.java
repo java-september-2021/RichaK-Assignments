@@ -5,9 +5,8 @@ public class Ninja extends Human {
     }
 
     public void steal(Human human) {
-        this.stealth = (human.health - this.stealth);
-        System.out.println("The Ninja stealth is : " + this.stealth);
-
+        human.health -= this.stealth;
+        this.health += this.stealth;
     }
 
     public void runAway() {

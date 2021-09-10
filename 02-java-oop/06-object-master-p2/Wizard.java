@@ -9,12 +9,12 @@ public class Wizard extends Human {
     }
 
     public void heal(Human healedHuman) {
-        healedHuman.health += super.intelligence;
+        healedHuman.health += this.intelligence;
         System.out.println("The healed human health is :  " + healedHuman.health);
     }
 
     public void fireball(Human anotherHuman) {
-        anotherHuman.health -= super.intelligence * 3;
+        anotherHuman.health -= this.intelligence * 3;
         System.out.println("The another human health is : " + anotherHuman.health);
     }
 
