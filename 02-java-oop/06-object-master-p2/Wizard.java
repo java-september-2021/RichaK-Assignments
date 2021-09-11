@@ -1,21 +1,18 @@
-public class Wizard extends Human {
-
-    int health;
-    int intelligence;
+public class Wizard extends HumanNew {
 
     public Wizard() {
         this.health = 50;
         this.intelligence = 8;
     }
 
-    public void heal(Human healedHuman) {
+    public void heal(HumanNew healedHuman) {
         healedHuman.health += this.intelligence;
         System.out.println("The healed human health is :  " + healedHuman.health);
     }
 
-    public void fireball(Human anotherHuman) {
+    public void fireball(HumanNew anotherHuman) {
         anotherHuman.health -= this.intelligence * 3;
-        System.out.println("The another human health is : " + anotherHuman.health);
+        System.out.println("The another human health after fireball attack is : " + anotherHuman.health);
     }
 
 }
