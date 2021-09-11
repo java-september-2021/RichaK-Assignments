@@ -1,5 +1,5 @@
 
-public class Bat extends Mammal {
+public class Bat extends MammalNew {
 
     public Bat(int energyLevel) {
         super(energyLevel);

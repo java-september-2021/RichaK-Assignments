@@ -1,7 +1,7 @@
-public class Mammal {
+public class MammalNew {
     protected int energyLevel = 100;
 
-    public Mammal(int energyLevel) {
+    public MammalNew(int energyLevel) {
         this.energyLevel = energyLevel;
 
     }
