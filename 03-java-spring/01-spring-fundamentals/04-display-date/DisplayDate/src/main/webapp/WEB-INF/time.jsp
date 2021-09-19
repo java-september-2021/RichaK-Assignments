@@ -7,11 +7,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Display Time</title>
-</head>
+	<script defer type="text/javascript" src="js/main.js"></script>
+	<link rel="stylesheet" href="css/style.css"/>
+</head>	
 <body>
-<c:set var="Date" value="<%=new java.util.Date()%>"/> 
-<h3>Formatted Time :  
-<fmt:formatDate type="time" value="${Date}"/>  
+<script>timeAlert()</script>
+<p class="time"><fmt:formatDate pattern="h:mm a" value="${datetime}"/>  
 	
 </body>
 </html>

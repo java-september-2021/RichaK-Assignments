@@ -7,12 +7,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Display Date</title>
+	<script defer type="text/javascript" src="js/main.js"></script>
+	<link rel="stylesheet" href="css/style.css"/>
 </head>
-<body>
-	<c:set var="Date" value="<%=new java.util.Date()%>"/> 
-	<p>  
-Formatted Date :  
-<fmt:formatDate type="date" value="${Date}" />  
-</p>  
+<body> 
+<script>dateAlert()</script>
+<p class="date"><fmt:formatDate pattern="EEEE 'the' dd 'of' MMMM,YYYY" value="${datetime}"/></p>  
 </body>
 </html>
