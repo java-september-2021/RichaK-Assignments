@@ -8,15 +8,16 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Time Dash board</title>
-	<link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
+
 <body>
 <div class="container">
 	<div class="col-1">
-		<a href="date">Date Template</a>
+		<a href="/date">Date Template</a>
 	</div>
 	<div class="col-2">
-		<a href="time">Time Template</a>
+		<a href="/time">Time Template</a>
 	</div>
 	
 </div>

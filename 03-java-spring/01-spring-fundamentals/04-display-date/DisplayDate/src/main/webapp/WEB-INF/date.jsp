@@ -7,11 +7,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Display Date</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script defer type="text/javascript" src="js/main.js"></script>
-	<link rel="stylesheet" href="css/style.css"/>
 </head>
+
 <body> 
-<script>dateAlert()</script>
+<script>alert("The window is showing current date")</script>
 <p class="date"><fmt:formatDate pattern="EEEE 'the' dd 'of' MMMM,YYYY" value="${datetime}"/></p>  
 </body>
 </html>

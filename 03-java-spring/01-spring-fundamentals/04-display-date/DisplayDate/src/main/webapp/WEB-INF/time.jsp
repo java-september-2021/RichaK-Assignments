@@ -7,11 +7,14 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Display Time</title>
-	<script defer type="text/javascript" src="js/main.js"></script>
-	<link rel="stylesheet" href="css/style.css"/>
+	<!-- <script defer type="text/javascript" src="js/main.js"></script> -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>	
+
 <body>
-<script>timeAlert()</script>
+<script>
+	alert("The window is showing current time")
+</script>
 <p class="time"><fmt:formatDate pattern="h:mm a" value="${datetime}"/>  
 	
 </body>
