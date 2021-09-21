@@ -15,7 +15,7 @@
 		<h3>Favorite Language: <c:out value="${language}"></c:out></h3>
 		<h3>Comment: <c:out value="${review}"></c:out></h3>
 		</div>
-		<buttton> Go Back</buttton>
+		<buttton>Go Back</buttton>
 
 	</body>
 </html>

@@ -14,7 +14,7 @@ public class DojoSurvey {
 		return "index.jsp";
 	}
 
-	@RequestMapping(value = "/postSurvey", method=RequestMethod.POST)
+	@RequestMapping(value="/survey", method=RequestMethod.POST)
 	public String survey(@RequestParam("name") String name, @RequestParam("location") String location,
 			@RequestParam("language") String language,@RequestParam("review") String review, Model model) {
 		model.addAttribute("name", name);

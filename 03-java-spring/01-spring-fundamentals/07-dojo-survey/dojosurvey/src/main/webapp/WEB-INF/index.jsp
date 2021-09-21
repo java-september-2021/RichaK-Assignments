@@ -9,17 +9,14 @@
 </head>
 <body>
 <div class="container">
-<form>
-
-
-</form action="/postSurvey" method="POST">
+<form method="POST" action="/survey">
 Your Name: <input type="text" name="name" placeholder="yourname">
 <br>
 Dojo Location: 
 <select name="location" id="location">
-<option value="SanJose">San Jose</option>
+<option value="san jose">San Jose</option>
 <option value="burbank">Burbank</option>
-<option value="paloalto">Palo Alto</option>
+<option value="palo alto">Palo Alto</option>
 </select>
 <br>
 Favorite Language:
@@ -34,8 +31,7 @@ Favorite Language:
 <br>
 <textarea name="review" rows="4" col="30"></textarea>
 <br>
-<button>Button</button>
-
-
+<button>Submit</button>
+</form>
 </body>
 </html>
