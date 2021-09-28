@@ -17,24 +17,41 @@
 		<table class="table table-striped">
 			<thead>
 				<tr>
-					<th name="name">Name</th>
-					<th name="creator">Creator</th>
-					<th name="version">Version</th>
-					<th name="action"></th>
+					<th>Name</th>
+					<th>Creator</th>
+					<th>Version</th>
+					<th>Action</th>
 				</tr>
 			</thead>
-			 <tbody>
-				<c:forEach var="language" items="{allLanguage}">
+		 <tbody>
+				<c:forEach items="${allLanguages}" var="language">
 					<tr>
-						<td><c:out value="${language.id}"></c:out></td>
-						<td><c:out value="${language.name}"></c:out></td>
-						<td><c:out value="${language.creator}"></c:out></td>
-						<td><c:out value="${language.version}"></c:out></td>
+						<td><a href="/show/${language.id}">${language.name}</a></td>
+						<td>${language.creator}</td>
+						<td>${language.version}</td>
+						<td><a href="/edit/${language.id}">Edit</a> | <a href="/delete/${language.id}">Delete</a></td>
 					</tr>
 				</c:forEach>
 			</tbody> 
 		</table>
-
+		<h3>Create new language form</h3>
+		<form:form action="/" method="POST" modelAttribute="language">
+			<p>
+				<form:label path="name">Name</form:label>
+				<form:errors path="name"></form:errors>
+				<form:input path="name" />
+			<p>
+				<form:label path="creator">Creator</form:label>
+				<form:errors path="creator"></form:errors>
+				<form:input path="creator" />
+			<p>
+				<form:label path="version">Version</form:label>
+				<form:errors path="version"></form:errors>
+				<form:input path="version" />
+				
+			<p>
+			<button>Submit</button>
+		</form:form>
 
 	</div>
 </body>

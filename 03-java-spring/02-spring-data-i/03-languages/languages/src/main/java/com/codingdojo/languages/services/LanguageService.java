@@ -21,7 +21,7 @@ public class LanguageService {
 	//Return all languages
 	
 	public List<Language> getAllLanguages(){
-		return langRepository.findAll();
+		return this.langRepository.findAll();
 		
 	}
 	
