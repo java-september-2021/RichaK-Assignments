@@ -18,11 +18,11 @@ public class Lookify {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Size(min=5, message="Title should be atleast 5 characters") // size is for String
+	@Size(min=5, max=100, message="Title should be atleast 5 characters") // size is for String
 	private String title;
 	
 	
-	@Size(min=5, message="Artist should be atleast 5 characters") // size is for String
+	@Size(min=5, max=100, message="Artist should be atleast 5 characters") // size is for String
 	private String artist;
 	
 	@NotNull
@@ -33,6 +33,14 @@ public class Lookify {
 	public Lookify() {
 		
 	}
+	
+
+	public Lookify(String title, String artist, int ratings) {
+		this.title = title;
+		this.artist = artist;
+		this.ratings = ratings;
+	}
+
 
 	public Long getId() {
 		return id;

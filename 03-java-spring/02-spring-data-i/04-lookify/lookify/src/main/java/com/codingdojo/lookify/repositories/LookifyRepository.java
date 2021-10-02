@@ -10,8 +10,8 @@ public interface LookifyRepository extends CrudRepository<Lookify, Long> {
 
 	List<Lookify> findAll();
 	
-	List<Lookify> findByartistIgnoreCase(String artist);
+	List<Lookify> findByArtistContaining(String artist);
 	
-	List<Lookify> findTop10ByOrderByratingsDesc(Integer ratings);
+	List<Lookify> findTop10ByOrderByRatingsDesc();
 	
 }

@@ -2,22 +2,39 @@ package com.codingdojo.lookify.services;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.codingdojo.lookify.model.Lookify;
 import com.codingdojo.lookify.repositories.LookifyRepository;
 
+@Service
 public class LookifyService {
-	@Autowired
-	LookifyRepository lrepo;
+	
+	private LookifyRepository lrepo;
+	
+	public LookifyService(LookifyRepository lrepo) {
+		this.lrepo = lrepo;
+	}
 	
 	//Get all songs
-	public List<Lookify> getAllSongs(){
+	public List<Lookify> allSongs(){
 		return this.lrepo.findAll();
 	}
 	
+	//Find a song
 	
-	//Delete one song
+	public Lookify findSong(Long id) {
+		return this.lrepo.findById(id).orElse(null);
+	}
+	
+	//List top 10 song
+	
+	public List<Lookify> topTenByRating(){
+		return this.lrepo.findTop10ByOrderByRatingsDesc();
+	}
+
+	
+	//Delete song
 	public String deleteSong(Long id) {
 		this.lrepo.deleteById(id);
 		return "Song got deleted";
@@ -31,13 +48,17 @@ public class LookifyService {
 	//Search By artist name
 	
 	public List<Lookify> searchByArtistName(String name) {
-		return this.lrepo.findByartistIgnoreCase(name);
+		return this.lrepo.findByArtistContaining(name);
 	}
 	
 	
 	//Search by top 10
 	
-	public List<Lookify> searchTopTen(Integer ratings){
-		return this.lrepo.findTop10ByOrderByratingsDesc(ratings);
+	public List<Lookify> searchTopTen(){
+		return this.lrepo.findTop10ByOrderByRatingsDesc();
+	}
+	
+	public Lookify updateSong(Lookify song) {
+		return this.lrepo.save(song);
 	}
 }
