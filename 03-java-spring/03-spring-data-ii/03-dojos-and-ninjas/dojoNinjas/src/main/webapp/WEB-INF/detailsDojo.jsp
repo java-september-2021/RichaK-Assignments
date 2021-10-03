@@ -13,25 +13,17 @@
 <title>Dojos List</title>
 </head>
 <body>
-	<hr>
-	Dojos Location List
-	</hr>
-	<table class="table table-striped">
-		<thead>
-			<tr>
-				<th>Location
-				</td>
-			</tr>
-		</thead>
-		<tbody>
-			<c:forEach items="${allDojos}" var=dojo>
-				<tr>
-					<td>${dojo.id}</td>
-					<td>${dojo.name}</td>
-				</tr>
-			</c:forEach>
-		</tbody>
-
+	<h1><c:out value="${dojo.name}">Locations Ninja</c:out></h1>
+	<table>
+	<tr>
+	<th>First Name</th>
+	<th>Last Name</th>
+	<th>Age</th>
+	</tr>
+	<c:forEach items="${dojo.ninjas}" var ="ninja"></c:forEach>
+	<td><c:out value = "${ninja.firstName}"></c:out></td>
+	<td><c:out value = "${ninja.lastName}"></c:out></td>
+	<td><c:out value = "${ninja.age}"></c:out></td>
 	</table>
 
 </body>

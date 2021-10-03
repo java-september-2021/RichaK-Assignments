@@ -14,13 +14,16 @@
 </head>
 <body>
 <div class="container"></div>
-	<h2>New Dojo</h2>
+	<h2>New Ninja</h2>
 	<hr></hr>
-	<form:form action="/addNinja" method="POST" modelAttribute="newNinja">
+	<form:form action="/ninjas/createNinja" method="POST" modelAttribute="ninja">
 		<div class="form-group row">
-			<form:label path="name">Dojo</form:label>
-			<form:errors path="name"></form:errors>
-			<form:input class="form-control" path="name" />
+			<form:label path="dojo">Dojo</form:label>
+			<form:errors path="dojo"></form:errors>
+			<form:select path="dojo">
+			<c:forEach items="${allDojos}" value="dojo"> </c:forEach>
+			<option value="$dojo.name}">${dojo.name}</option>
+			</form:select>
 		</div>
 		<div class="form-group row">
 			<form:label path="firstName">First Name</form:label>

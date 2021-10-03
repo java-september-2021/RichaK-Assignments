@@ -15,12 +15,12 @@
 <body>
 	<div class="container"></div>
 	<h2>New Dojo</h2>
-	<hr></hr>
-	<form:form action="/addDojo" method="POST" modelAttribute="newDojo">
+	
+	<form:form action="/dojos/addDojo" method="POST" modelAttribute="dojo">
 		<div class="form-group row">
-			<form:label path="name">Name</form:label>
+			<form:label for="formGroupExampleInput" path="name">Name</form:label>
 			<form:errors path="name"></form:errors>
-			<form:input class="form-control" path="name" />
+			<form:input id="formGroupExampleInput" class="form-control" path="name" />
 		</div>
 		<p>
 			<button type="submit" class="btn btn-primary">Create</button>

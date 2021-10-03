@@ -6,14 +6,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.codingdojo.dojo.models.Dojo;
+import com.codingdojo.dojo.models.Ninja;
 import com.codingdojo.dojo.repositories.DojoRepository;
+import com.codingdojo.dojo.repositories.NinjaRepository;
 
 
 @Service
-public class DojoService {
+public class DojoNinjaService {
 
 	@Autowired
 	private DojoRepository dRepo;
+	
+	@Autowired
+	private NinjaRepository nRepo;
+	
 	
 	//Gel All Dojos
 	
@@ -32,6 +38,10 @@ public class DojoService {
 	
 	public Dojo createDojo(Dojo dojo) {
 		return this.dRepo.save(dojo);
+	}
+	
+	public Ninja createNinja(Ninja ninja) {
+		return this.nRepo.save(ninja);
 	}
 	
 	//Update a Dojo
